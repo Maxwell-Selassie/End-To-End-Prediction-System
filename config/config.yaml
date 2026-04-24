@@ -1,0 +1,8 @@
+project:
+  name: telco-churn-prediction
+  version: "1.0.0"
+  description: End-to-end churn prediction system
+
+logging:
+  level: INFO
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"

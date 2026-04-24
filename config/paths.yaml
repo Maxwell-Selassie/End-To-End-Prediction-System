@@ -1,0 +1,11 @@
+data:
+  raw: data/raw/telco_customer_churn.csv
+  interim: data/raw/cleaned.csv
+  processed: data/processed/features.csv
+
+models:
+  output_dir: models/
+  best_model: models/best_model.joblib
+
+reports:
+  figures: reports/figures/
