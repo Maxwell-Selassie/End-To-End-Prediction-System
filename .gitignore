@@ -20,4 +20,6 @@ models/
 .python-version
 
 # Jupyter Notebook checkpoints
-.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+reports/
