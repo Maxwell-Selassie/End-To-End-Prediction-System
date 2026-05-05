@@ -1,0 +1,39 @@
+# ======================================
+# LOGGING CONFIGURATION
+# Controls log level and format for all pipeline modules
+# ======================================
+
+version: 1
+disable_existing_loggers: false
+
+formatters:
+  standard:
+    format: "%(asctime)s | %(levelname)-8s | %(name)s | %(message)s"
+    datefmt: "%Y-%m-%d %H:%M:%S"
+  simple:
+    format: "%(levelname)-8s | %(message)s"
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: INFO
+    formatter: standard
+    stream: ext://sys.stdout
+
+  file:
+    class: logging.FileHandler
+    level: DEBUG
+    formatter: standard
+    filename: "logs/pipeline.log"
+    mode: "a"
+    encoding: "utf-8"
+
+root:
+  level: DEBUG
+  handlers: [console, file]
+
+loggers:
+  churn_prediction:
+    level: DEBUG
+    handlers: [console, file]
+    propagate: false
